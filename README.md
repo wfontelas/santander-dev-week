@@ -5,33 +5,37 @@ Java RESTful API criada para a Santander Dev Week
 ```mermaid
 classDiagram
     class User {
-        +String name
-        +Account account
-        +Card card
-        +List~Feature~ features
-        +List~News~ news
+        -Long id
+        -String name
+        -Account account
+        -Card card
+        -List~Feature~ features
+        -List~News~ news
     }
 
     class Account {
-        +String number
-        +String agency
-        +double balance
-        +double limit
+        -Long id
+        -String number
+        -String agency
+        -BigDecimal balance
+        -BigDecimal limit
     }
 
     class Card {
-        +String number
-        +double limit
+        -String number
+        -BigDecimal limit
     }
 
     class Feature {
-        +String icon
-        +String description
+        -Long id
+        -String icon
+        -String description
     }
 
     class News {
-        +String icon
-        +String description
+        -Long id
+        -String icon
+        -String description
     }
 
     User "1" *-- "1" Account
