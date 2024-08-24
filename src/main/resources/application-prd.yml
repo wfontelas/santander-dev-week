@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://junction.proxy.rlwy.net:54538/railway
+    username: ${PGUSER}
+    password: ${PGPASSWORD}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+
+
+
+
+
+
+

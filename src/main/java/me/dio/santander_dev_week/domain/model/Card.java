@@ -14,7 +14,11 @@ public class Card {
     @Column(unique = true)
     private String number;
 
-    @Column(name = "available_limit", scale = 13, precision = 2)
+    /**
+     * o name = avaliable_limit nos garante que não tenhamos problemas
+     * com a palavra reservada "limit"
+     */
+    @Column(name = "available_limit", precision = 13, scale = 2)
     private BigDecimal limit;
 
 

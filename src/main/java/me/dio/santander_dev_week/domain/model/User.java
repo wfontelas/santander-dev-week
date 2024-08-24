@@ -18,6 +18,9 @@ public class User {
     @OneToOne(cascade = CascadeType.ALL)
     private Card card;
 
+    /**
+     * Obs: fetch = FetchType.EAGER), toda a vez que ele buscar
+     */
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Feature> features;
 
