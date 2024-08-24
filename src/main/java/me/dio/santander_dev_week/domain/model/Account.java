@@ -19,6 +19,10 @@ public class Account {
     @Column(precision = 13, scale = 2)
     private BigDecimal balance;
 
+    /**
+     * o name = additional_limit nos garante que não tenhamos problemas
+     * com a palavra reservada "limit"
+     */
     @Column(name = "additional_limit", precision = 13, scale = 2)
     private BigDecimal limit;
 
